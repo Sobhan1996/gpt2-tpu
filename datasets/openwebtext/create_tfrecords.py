@@ -16,7 +16,7 @@ name = "cnn_dm" # Name of output files will be name_i.tfrecords where i is the n
 output_dir = "tfrecords"
 log_dir = "logs"
 print(os.path.join(base_dir, "**/*.story"))
-files = glob.glob(os.path.join(base_dir, "**/*.story"))
+files = glob.glob(os.path.join(base_dir, "*.story"))
 processes = 64 # Number of encoding processes to run
 encoder_path = "/home/niknamian96/gpt2-tpu/encoder" # Path to encoder files
 minimum_size = 25
