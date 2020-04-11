@@ -17,7 +17,7 @@ output_dir = "tfrecords"
 log_dir = "logs"
 files = glob.glob(os.path.join(base_dir, "**/*.txt"))
 processes = 64 # Number of encoding processes to run
-encoder_path = "encoder" # Path to encoder files
+encoder_path = "../../encoder" # Path to encoder files
 minimum_size = 25
 
 def _int64_feature(value):
