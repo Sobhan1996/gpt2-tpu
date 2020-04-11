@@ -13,7 +13,7 @@ import encoder
 base_dir = "/home/niknamian96/gpt2-tpu/datasets/CNN_DM_dataset/dm_stories_tokenized" # Path to where your .txt files are located
 files_per = 175000 # 175000 ~ 200-300MB
 name = "cnn_dm" # Name of output files will be name_i.tfrecords where i is the number of the file
-output_dir = "tfrecords"
+output_dir = "/home/niknamian96/gpt2-tpu/tfrecords"
 log_dir = "logs"
 print(os.path.join(base_dir, "**/*.story"))
 files = glob.glob(os.path.join(base_dir, "*.story"))
