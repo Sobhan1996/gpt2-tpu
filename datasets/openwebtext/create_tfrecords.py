@@ -10,14 +10,14 @@ from tqdm import tqdm
 
 import encoder
 
-base_dir = "~/gpt2-tpu/datasets/CNN_DM_dataset/dm_stories_tokenized" # Path to where your .txt files are located
+base_dir = "/home/niknamian96/gpt2-tpu/datasets/CNN_DM_dataset/dm_stories_tokenized" # Path to where your .txt files are located
 files_per = 175000 # 175000 ~ 200-300MB
 name = "cnn_dm" # Name of output files will be name_i.tfrecords where i is the number of the file
 output_dir = "tfrecords"
 log_dir = "logs"
 files = glob.glob(os.path.join(base_dir, "**/*.txt"))
 processes = 64 # Number of encoding processes to run
-encoder_path = "~/gpt2-tpu/encoder" # Path to encoder files
+encoder_path = "/home/niknamian96/gpt2-tpu/encoder" # Path to encoder files
 minimum_size = 25
 
 def _int64_feature(value):
