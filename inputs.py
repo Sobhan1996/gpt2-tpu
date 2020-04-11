@@ -116,3 +116,13 @@ def gpt2_pred_input(params, text=None):
     t = tf.broadcast_to(tokens, [params["batch_size"], len(tokens)])
     dataset = tf.data.Dataset.from_tensors(t)
     return dataset
+
+
+def my_input(params, eval=False):
+    if not eval:
+        numbers = [0, 1] # A random subset of files for train
+    else:
+        numbers = [0, 1] # Random subset for eval
+    files = [os.path.join(params["data_path"], "cnn_dm_{}.tfrecords".format(str(i))) for i in numbers] # Generates the list of files
+
+    return bpe_text(params["batch_size"], files, amount=params["n_ctx"], iterations=params["iterations"], stitch=9, batch=True)

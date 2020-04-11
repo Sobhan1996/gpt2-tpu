@@ -21,7 +21,7 @@
     "eval_batch_size": 8,
     "iterations": 500,
     "n_embd": 1024,
-    "input": "openwebtext",
+    "input": "my_input",
     "model": "GPT2",
     "model_path": "PrettyBig",
     "n_ctx": 1024,
